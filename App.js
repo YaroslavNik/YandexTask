@@ -28,13 +28,17 @@ const updateMatrix = (matrixPrev) => {
 
     for(let i = 0; i < matrixPrev.length; i++) {
         for(let j = 0; j < matrixPrev[i].length; j++) {
+
             if(matrixPrev[i][j] === 0) {
+
                 if(getAlive(i, j, matrixPrev) === 3) {
                     matrixCur[i][j] = 1
                     flag = true
                 } else matrixCur[i][j] = 0
             } 
+
             else {
+                
                 switch (getAlive(i, j, matrixPrev) - 1) {
                     
                     case 0:
