@@ -23,7 +23,9 @@ const createMatrix = (rows, cols) => {
 
 const updateMatrix = (matrixPrev) => {
 
-    const matrixCur = createMatrix(rows, cols);
+    // const matrixCur = createMatrix(rows, cols);
+    const matrixCur = JSON.parse(JSON.stringify(matrixPrev))
+    
     let flag = false;
 
     for(let i = 0; i < matrixPrev.length; i++) {
